@@ -1,6 +1,6 @@
 # CNN Projects :
 - [x] CNN_cifar10
-- [ ] CNN_mnist_classfication_kaggle
+- [x] CNN_mnist_classfication_kaggle
 - [ ] CNN Doodle Classifier
 - [ ] CNN From Scratch
 - [ ] CNN Content Based Recommender System
