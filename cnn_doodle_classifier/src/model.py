@@ -102,6 +102,11 @@ def main():
     
     # Initialize model, loss, and optimizer
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # Load the model (if possible)
+    # model = DoodleCNN(num_classes=10).to(device)
+    # model.load_state_dict(torch.load("doodle_cnn.pth"))
+    # model.eval()
+    # print("Loaded pre-trained model")
     model = DoodleCNN(num_classes=10).to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -140,6 +145,10 @@ def main():
                 correct += (predicted == labels).sum().item()
         
         print(f"Validation Accuracy: {100 * correct / total:.2f}%")
+    
+    # Save the model after training
+    torch.save(model.state_dict(), "doodle_cnn.pth")
+    print("Model saved as doodle_cnn.pth")
 
 if __name__ == "__main__":
     main()
