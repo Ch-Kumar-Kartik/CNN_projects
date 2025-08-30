@@ -8,3 +8,4 @@
 - [ ] Glaucoma Detection using CNN
 - [ ] Hand sign digit recognizer using CNN
 - [ ] CNN Pizza Classifier 
+- [ ] CNN Object Detection
